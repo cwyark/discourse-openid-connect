@@ -46,6 +46,7 @@ class OpenIDConnectAuthenticator < Auth::ManagedAuthenticator
           client_secret: SiteSetting.openid_connect_client_secret,
           client_options: {
             discovery_document: SiteSetting.openid_connect_discovery_document,
+            ssl: { verify: false }
           },
           scope: SiteSetting.openid_connect_authorize_scope,
           token_params: {
