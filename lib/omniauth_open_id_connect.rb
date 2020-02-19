@@ -200,3 +200,6 @@ module ::OmniAuth
 end
 
 OmniAuth.config.add_camelization 'openid_connect', 'OpenIDConnect'
+OmniAuth.config.full_host = lambda do |_|
+  "https://neuron.adlinktech.com"
+end
